@@ -1,0 +1,69 @@
+{% extends "oodlums/base.html" %}
+{% load staticfiles %}
+
+{% block title %} Videos - Oodlums {% endblock %}
+
+{% block scripts %}{% endblock %}
+
+{% block body %}
+    {% if videos %}        
+        {% for video in videos %}
+            <div class="videoAndTextWrapper">
+                <div class="videoTitleWrapper">
+                    <h3>{{video.title_text}}</h3>
+                </div>
+                <div class="videoWrapper">
+                    <iframe height="315" width="310" src="https://www.youtube.com/embed/{{video.youtubeKey_text}}" allowfullscreen frameBorder="0"></iframe>
+                </div>    
+                <div class="sellfyLinksWrapper">
+                    <div>
+                        <div>
+                            <h4 class="first">Music Video</h4>
+                        </div>
+                        <div>
+                            <a href="https://sellfy.com/p/{{video.sellfyMusicVideoKey_text}}/" id="{{video.sellfyMusicVideoKey_text}}" class="sellfy-buy-button sellfyLinks" data-text=""></a>
+                            <script src="https://sellfy.com/js/api_buttons.js"></script>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h4>Singalong Video</h4>
+                        </div>
+                        <div>
+                            <a href="https://sellfy.com/p/{{video.sellfyLyricVideoKey_text}}/" id="{{video.sellfyLyricVideoKey_text}}" class="sellfy-buy-button sellfyLinks" data-text=""></a>
+                            <script src="https://sellfy.com/js/api_buttons.js"></script>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h4>The Big Combo<br />
+                            (Music + Singalong)</h4>
+                        </div>
+                        <div>
+                            <a href="https://sellfy.com/p/{{video.sellfyStitchedVideoKey_text}}/" id="{{video.sellfyStitchedVideoKey_text}}" class="sellfy-buy-button sellfyLinks" data-text=""></a>
+                            <script src="https://sellfy.com/js/api_buttons.js"></script>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopIcons">
+                {% if video.amazonPurchaseLink_text %}
+                    <div>
+                        <a href="{{video.amazonPurchaseLink_text}}" target="_blank"><img src="{% static 'images/amazonIcon.jpg' %}" /></a>
+                    </div>
+                {% endif %}
+                {% if video.iTunesPurchaseLink_text %}
+                    <div>
+                        <a href="{{video.iTunesPurchaseLink_text}}" target="_blank"><img src="{% static 'images/iTunesIcon.jpg' %}" /></a>
+                    </div>
+                {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No videos are available</p>
+    {% endif %}
+{% endblock %}
+
+
+
+

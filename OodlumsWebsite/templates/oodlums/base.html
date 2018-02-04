@@ -1,0 +1,39 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "base.css" %}" />
+    {% block scripts %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="headerIconsAndLogo">
+            <div class="iconWrapper left">
+            <a href="http://smarturl.it/RowRow" target="_blank"><img src="{% static 'images/youtubeIcon.png' %}" class="icon"/> </a>
+            <a href="http://smarturl.it/NurseryRhymesPt1" target="_blank"><img src="{% static 'images/spotifyIcon.png' %}" class="icon"/></a>
+            </div>
+            <div>
+            <a href="{% url 'home' %}"><img src="{% static 'images/oodlumslogo.gif' %}" class="headerLogo" /></a>
+            </div>
+            <div class="iconWrapper right">
+            <a href="https://twitter.com/oodlums" target="_blank"><img src="{% static 'images/twitterIcon.png' %}" class="icon"/></a>
+            <a href="https://www.instagram.com/oodlum_rhymes/" target="_blank"><img src="{% static 'images/instagramIcon.png' %}" class="icon"/></a>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li class="navbar"><a href="{% url 'home' %}">Home</a></li>
+                <li class="navbar"><a href="{% url 'videos:list' %}">Videos</a></li>
+                <li class="navbar"><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+    {% block body %}
+    {% endblock %}
+    </div>
+</body>
+</html>

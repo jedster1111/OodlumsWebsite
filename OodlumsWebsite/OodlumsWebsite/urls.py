@@ -2,13 +2,24 @@
 Definition of urls for OodlumsWebsite.
 """
 
-from django.conf.urls import include, url
+from django.urls import include, path
+from django.contrib import admin
+admin.autodiscover()
+
+from . import views
+
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
-# admin.autodiscover()
+
 
 urlpatterns = [
+    path('', views.home, name = "home"),
+    path('videos/', include('videos.urls')),
+    path('contact/', views.contact, name ="contact"),
+    path('admin/', admin.site.urls),
+
+
     # Examples:
     # url(r'^$', OodlumsWebsite.views.home, name='home'),
     # url(r'^OodlumsWebsite/', include('OodlumsWebsite.OodlumsWebsite.urls')),
