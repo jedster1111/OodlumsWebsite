@@ -20,29 +20,41 @@
                         <div>
                             <h4 class="first">Music Video</h4>
                         </div>
-                        <div>
-                            <a href="https://sellfy.com/p/{{video.sellfyMusicVideoKey_text}}/" id="{{video.sellfyMusicVideoKey_text}}" class="sellfy-buy-button sellfyLinks" data-text=""></a>
-                            <script src="https://sellfy.com/js/api_buttons.js"></script>
-                        </div>
+                        {% if video.sellfyMusicVideoKey_text %}
+                            <div>
+                                <a href="https://sellfy.com/p/{{video.sellfyMusicVideoKey_text}}/" id="{{video.sellfyMusicVideoKey_text}}" class="sellfy-buy-button sellfyLinks" data-text=""></a>
+                                <script src="https://sellfy.com/js/api_buttons.js"></script>
+                            </div>
+                        {% else %}
+                            <div class="comingSoon"><h6>Coming Soon</h6></div>
+                        {% endif %}
                     </div>
                     <div>
                         <div>
                             <h4>Singalong Video</h4>
                         </div>
-                        <div>
-                            <a href="https://sellfy.com/p/{{video.sellfyLyricVideoKey_text}}/" id="{{video.sellfyLyricVideoKey_text}}" class="sellfy-buy-button sellfyLinks" data-text=""></a>
-                            <script src="https://sellfy.com/js/api_buttons.js"></script>
-                        </div>
+                        {% if video.sellfyLyricVideoKey_text %}
+                            <div>
+                                <a href="https://sellfy.com/p/{{video.sellfyLyricVideoKey_text}}/" id="{{video.sellfyLyricVideoKey_text}}" class="sellfy-buy-button sellfyLinks" data-text=""></a>
+                                <script src="https://sellfy.com/js/api_buttons.js"></script>
+                            </div>
+                        {% else %}
+                            <div class="comingSoon"><h6>Coming Soon</h6></div>
+                        {% endif %}
                     </div>
                     <div>
                         <div>
                             <h4>The Big Combo<br />
                             (Music + Singalong)</h4>
                         </div>
-                        <div>
-                            <a href="https://sellfy.com/p/{{video.sellfyStitchedVideoKey_text}}/" id="{{video.sellfyStitchedVideoKey_text}}" class="sellfy-buy-button sellfyLinks" data-text=""></a>
-                            <script src="https://sellfy.com/js/api_buttons.js"></script>
-                        </div>
+                        {% if video.sellfyStitchedVideoKey_text %}
+                            <div>
+                                <a href="https://sellfy.com/p/{{video.sellfyStitchedVideoKey_text}}/" id="{{video.sellfyStitchedVideoKey_text}}" class="sellfy-buy-button sellfyLinks" data-text=""></a>
+                                <script src="https://sellfy.com/js/api_buttons.js"></script>
+                            </div>
+                        {% else %}
+                            <div class="comingSoon"><h6>Coming Soon</h6></div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="shopIcons">

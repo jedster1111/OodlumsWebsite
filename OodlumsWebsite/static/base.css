@@ -148,6 +148,13 @@ li a:hover {
     text-align:center;
 }
 
+h2{
+    text-align:center;
+    padding:5px 30px;
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
 h3{
     margin-top:0;
     margin-bottom:4px;
@@ -155,6 +162,23 @@ h3{
 
 h4{
     margin:0 0 3px 0;
+}
+
+h5{
+    font-size:18px;
+    font-weight:650;
+    text-align:center;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:5px;
+}
+
+h6 {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 16px;
+    display: inline;
+    color: #ffedda;
 }
 
 .first{
@@ -176,6 +200,16 @@ h4{
     margin-bottom:16px;
 }
 
+.comingSoon {
+    padding: 8px 5px;
+    background: #ff919d;
+    border-radius: 10px;
+    border:solid 1px #d97b86;
+    width: 100px;
+    margin: 8px auto;
+    margin-bottom: 16px;
+}
+
 .shopIcons{
     text-align:center;
     width:100%;
@@ -189,4 +223,66 @@ h4{
 .shopIcons > div > a > img {
     width: 100px;
     margin: 0 10px;
+}
+
+.camel{
+    width:175px;
+    height:auto;
+    float:left;
+    position:absolute;
+}
+.camelWrapper{
+    width:175px;
+    margin:0 auto;
+    padding-bottom:92px;
+    left:85px;
+    position:relative   ;
+}
+
+.rowBoat{
+    width:190px;
+    height:auto;
+    float:left;
+    position:absolute;
+}
+
+.rowBoatWrapper{
+    width:190px;
+    margin:0 auto;
+    padding-right:110px;
+}
+
+.formWrapper{
+    width:290px;
+    margin:5px auto;
+}
+
+.fieldWrapper{
+    margin:15px 2px;
+}
+
+label{
+    padding-left:2px;
+    font-size:15px;
+}
+
+textarea{
+    font-family:inherit;
+}
+
+input[type=text], textarea{
+    border:solid 2px #ccc;
+    border-radius:5px;
+    width:100%;
+
+}
+
+input[type=submit]{
+    padding: 8px 20px;
+    background:#555555;
+    border: 0 none;
+    cursor:pointer;
+    border-radius:5px;
+    color:white;
+    margin-left:2px;
 }

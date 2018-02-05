@@ -1,11 +1,28 @@
 {% extends "oodlums/base.html" %}
 
-{% block title %} Videos - Oodlums {% endblock %}
+{% block title %} Contact Us - Oodlums {% endblock %}
 
 {% block scripts %}{% endblock %}
 
 {% block body %}
-   <h1>welcome to the contact page</h1>
+<h5>We're busy making more great videos.<br />
+    Stay tuned!</h5>
+
+    <form action="{% url 'contact' %}" method="post">
+        {% csrf_token %}
+        <div class="formWrapper">
+            {% for field in form %}
+                <div class="fieldWrapper">
+                    {{field.errors}}
+                    <label for="{{field.id_for_label}}">{{field.label}}</label><br />
+                    {{field}}
+                </div>
+            {% endfor %}
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+ 
+
 {% endblock %}
 
 

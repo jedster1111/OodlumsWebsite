@@ -31,6 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="manage.py" />
+    <Compile Include="OodlumsWebsite\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="OodlumsWebsite\views.py">
       <SubType>Code</SubType>
     </Compile>
@@ -54,6 +57,7 @@
     <Content Include="static\base.css" />
     <Content Include="static\images\oodlumslogo.gif" />
     <Content Include="templates\oodlums\contact.html" />
+    <Content Include="templates\oodlums\contact_template.txt" />
     <Content Include="videos\static\videos\images\background.jpg" />
     <Content Include="videos\static\videos\style.css" />
     <Content Include="templates\oodlums\base.html" />
