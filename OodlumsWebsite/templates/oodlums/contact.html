@@ -1,13 +1,15 @@
 {% extends "oodlums/base.html" %}
+{% load staticfiles %}
 
 {% block title %} Contact Us - Oodlums {% endblock %}
 
 {% block scripts %}{% endblock %}
 
 {% block body %}
-<h5>We're busy making more great videos.<br />
-    Stay tuned!</h5>
-
+    <img src="{% static 'images/oodlumsTeaAndCake.gif' %}" class="teaAndCake" />
+    <h5>We're busy making more great videos.<br />
+        Stay tuned!</h5>
+    
     <form action="{% url 'contact' %}" method="post">
         {% csrf_token %}
         <div class="formWrapper">
@@ -21,8 +23,6 @@
             <input type="submit" value="Submit" />
         </div>
     </form>
- 
-
 {% endblock %}
 
 
