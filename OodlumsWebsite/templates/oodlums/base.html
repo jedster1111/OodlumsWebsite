@@ -9,6 +9,7 @@
     {% block scripts %}{% endblock %}
 </head>
 <body class="site">
+    <div class="siteContent">
     <header>
         <div class="headerIconsAndLogo">
             <div class="iconWrapper left">
@@ -30,14 +31,13 @@
                 <li class="navbar"><a href="{% url 'contact' %}">Contact Us</a></li>
             </ul>
         </div>
-    </header>
-    <div class="siteContent">
+    </header>    
         {% block body %}
         {% endblock %}
     </div>
 <footer>
     <div>
-        @2017 oodlums
+        <span class="footerText">@2017 oodlums</span>
     </div>
 </footer>
 </body>
