@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "base.css" %}" />
     {% block scripts %}{% endblock %}
 </head>
-<body>
+<body class="site">
     <header>
         <div class="headerIconsAndLogo">
             <div class="iconWrapper left">
@@ -31,9 +31,9 @@
             </ul>
         </div>
     </header>
-    <div>
-    {% block body %}
-    {% endblock %}
+    <div class="siteContent">
+        {% block body %}
+        {% endblock %}
     </div>
 <footer>
     <div>
