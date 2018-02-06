@@ -1,0 +1,471 @@
+html, body {
+    height: 100%;
+}
+
+.site {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.siteContent {
+    flex: 1 0 auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: floralwhite;
+    min-width: 330px;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #ffde1e;
+    width: 100%;
+    height: 220px;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    height: 35px;
+    background-color: #ffde1e;
+    width: 100%;
+    position: relative;
+}
+
+    footer div {
+        margin: 0 auto;
+        width: 290px;
+        height: 100%;
+        font-size: 14px;
+        font-weight: 100;
+        text-align: right;
+    }
+
+.footerText {
+    top: 10px;
+    line-height: 2.5;
+}
+
+@media only screen and (min-width:650px) {
+    footer div {
+        width: 620px;
+    }
+}
+
+
+
+
+.iconWrapper {
+    position: relative;
+    bottom: 15px;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+.icon {
+    height: 70px;
+    width: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+.headerIconsAndLogo img {
+    display: block;
+}
+
+.headerIconsAndLogo > div {
+    display: inline-block;
+}
+
+.headerLogo {
+    display: block;
+    height: auto;
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 0;
+}
+
+header li {
+    display: inline-block;
+}
+
+.headerIconsAndLogo {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 650px) {
+    .headerIconsAndLogo img {
+        display: inline;
+    }
+
+    .left {
+        left: -30px;
+    }
+
+    .right {
+        right: -30px;
+    }
+
+    .icon {
+        margin: 0px 13px;
+    }
+}
+
+
+
+.videoAndTextWrapper {
+    padding: 15px 5%;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+@media only screen and (min-width: 1100px) {
+    .videoAndTextWrapper {
+        width: 990px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .videoWrapper iframe {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.spotifyWrapper {
+    /* change padding to move spotify player up and down */
+    padding-top: 85px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .spotifyWrapper > div {
+        position: relative;
+        padding-bottom: 360px;
+        padding-top: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .spotifyWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+ul {
+    list-style-type: none;
+    /* Aligns the navbar to be centered */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.navbar {
+    display: inline-block;
+}
+
+header > div > ul {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+    header > div > ul > li {
+        width: 25%;
+    }
+
+@media only screen and (min-width: 1000px) {
+    header > div > ul > li {
+        width: 250px;
+    }
+}
+
+li a {
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #FF5471;
+    text-decoration: none;
+    padding: 2px 0;
+    margin: 3px 2px;
+}
+
+    li a:hover {
+        background-color: #fc83ac;
+        color: white;
+    }
+
+.videoTitleWrapper {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    padding: 5px 30px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+h4 {
+    margin: 0 0 3px 0;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin: 5px 10px;
+}
+
+h6 {
+    font-size: 14px;
+    display: inline;
+    color: #ffedda;
+    line-height:40px;
+}
+
+.first {
+    margin-top: 8px;
+}
+
+.sellfyLinksWrapper {
+    text-align: center;
+    margin: 20px auto;
+    margin-bottom: 5px;
+    width: 220px;
+    padding: 10px 0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.sellfyLinks {
+    margin-bottom: 16px;
+}
+
+.comingSoon {
+    padding: 0;
+    background: #ff919d;
+    border-radius: 20px;
+    border: solid 1px #d97b86;
+    width: 158px;
+    height:40px;
+    margin: 7px auto;
+    margin-bottom: 16px;
+}
+
+.shopIcons {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+    .shopIcons > div {
+        display: inline-block;
+    }
+
+        .shopIcons > div > a > img {
+            width: 110px;
+            margin: 5px 10px 0 10px;
+        }
+
+@media only screen and (min-width:735px) {
+    .sellfyLinksWrapper {
+        width: 95%;
+    }
+
+        .sellfyLinksWrapper > div {
+            display: inline-block;
+            vertical-align: bottom;
+            margin: 0 18px;
+        }
+
+            .sellfyLinksWrapper > div > div {
+                width: 163px;
+            }
+
+    .shopIcons > div > a > img {
+        width: 125px;
+    }
+}
+
+@media only screen and (min-width:870px) {
+    .sellfyLinksWrapper > div {
+        margin: 0 35px;
+    }
+}
+
+.camel {
+    width: 175px;
+    height: auto;
+    position: absolute;
+    left: 90px;
+}
+
+.camelWrapper {
+    width: 175px;
+    height: 1px;
+    margin: 0 auto;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.rowBoat {
+    width: 190px;
+    height: auto;
+    position: relative;
+    bottom: 10px;
+    z-index: -1;
+}
+
+.rowBoatWrapper {
+    width: 190px;
+    margin: 0 auto;
+    padding-right: 110px;
+}
+
+@media only screen and (min-width: 970px) {
+    .camel {
+        width: 300px;
+    }
+
+    .camelWrapper {
+        width: 300px;
+        left: 220px;
+        top: 30px;
+    }
+
+    .spotifyWrapper {
+        /* change padding to move spotify player up and down */
+        padding-top: 20px;
+    }
+
+    .rowBoat {
+        width: 320px;
+        bottom: 280px;
+    }
+
+    .rowBoatWrapper {
+        padding-right: 660px;
+    }
+}
+
+.teaAndCake {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.formWrapper {
+    width: 290px;
+    margin: 5px auto;
+    margin-bottom: 25px;
+}
+
+.fieldWrapper {
+    margin: 15px 2px;
+}
+
+
+
+label {
+    padding-left: 2px;
+    font-size: 15px;
+}
+
+textarea {
+    font-family: inherit;
+}
+
+input[type=text], textarea {
+    border: dotted 2px #ccc;
+    border-radius: 5px;
+    width: 100%;
+    padding: 8px 10px;
+    outline: none;
+    -webkit-transition: 0.4s;
+    transition:0.4s;
+}
+
+input[type=text]:focus, textarea:focus {
+    border: 2px solid #fc83ac;
+}
+
+input[type=submit] {
+    padding: 8px 20px;
+    background: #555555;
+    border: 0 none;
+    cursor: pointer;
+    
+    border-radius: 5px;
+    color: white;
+    margin-left: 2px;
+}
+
+    input[type=submit]:hover {
+        background-color: #717171;
+    }
+
+   
+
+        @media only screen and (min-width:600px) {
+            .formWrapper {
+                width: 70%;
+            }
+
+            .teaAndCake {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (min-width:800px) {
+            .formWrapper {
+                width: 560px;
+            }
+
+            .teaAndCake {
+                width: 400px;
+            }
+        }
