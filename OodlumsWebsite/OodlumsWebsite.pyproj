@@ -34,6 +34,8 @@
     <Compile Include="OodlumsWebsite\forms.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="OodlumsWebsite\settings_deployment.py" />
+    <Compile Include="OodlumsWebsite\settings_secret.py" />
     <Compile Include="OodlumsWebsite\views.py">
       <SubType>Code</SubType>
     </Compile>
