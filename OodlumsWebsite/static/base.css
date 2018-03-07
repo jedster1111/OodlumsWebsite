@@ -444,9 +444,15 @@ input[type=submit] {
     margin-left: 2px;
 }
 
-    input[type=submit]:hover {
-        background-color: #717171;
-    }
+input[type=submit]:hover {
+    background-color: #717171;
+}
+
+.messages {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px 15px;
+}
 
    
 

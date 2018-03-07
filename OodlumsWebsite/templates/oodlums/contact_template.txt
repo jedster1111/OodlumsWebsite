@@ -1,8 +1,7 @@
-Name:
-{{ name }}
+Hi {{ name }},
+We'll get back to you at {{ email }} soon,
+thanks for contacting us!
+Oodlums Team
 
-Email:
-{{ email }}
-
-Message:
+Your message:
 {{ message|safe|striptags }}
