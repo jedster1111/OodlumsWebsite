@@ -7,6 +7,14 @@
 
 {% block body %}
     <img src="{% static 'images/oodlumsTeaAndCake.gif' %}" class="teaAndCake" />
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <h5>We're busy making more great videos.<br />
         Stay tuned!</h5>
     
