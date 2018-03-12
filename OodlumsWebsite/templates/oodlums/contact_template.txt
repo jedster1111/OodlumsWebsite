@@ -1,6 +1,6 @@
 Hi {{ name }},
-We'll get back to you at {{ email }} soon,
-thanks for contacting us!
+We'll get back to you at {{ email }} soon.
+Thanks for contacting us!
 Oodlums Team
 
 Your message:

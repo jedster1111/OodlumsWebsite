@@ -170,7 +170,7 @@ header li {
 
     .spotifyWrapper > div {
         position: relative;
-        padding-bottom: 360px;
+        padding-bottom: 450px;
         padding-top: 0;
         height: 0;
         overflow: hidden;
@@ -362,6 +362,7 @@ h6 {
 
 .rowBoatWrapper {
     width: 190px;
+    height: 75px;
     margin: 0 auto;
     padding-right: 110px;
 }
@@ -438,7 +439,7 @@ input[type=submit] {
     background: #555555;
     border: 0 none;
     cursor: pointer;
-    
+
     border-radius: 5px;
     color: white;
     margin-left: 2px;
@@ -454,7 +455,7 @@ input[type=submit]:hover {
     margin: 15px 15px;
 }
 
-   
+
 
         @media only screen and (min-width:600px) {
             .formWrapper {

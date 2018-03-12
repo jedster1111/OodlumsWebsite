@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
-from django.core.mail import send_mail, EmailMessage, BadHeaderError
-from django.template import Context
+from django.core.mail import EmailMessage, BadHeaderError
 from django.template.loader import get_template
 from .forms import ContactForm
 from django.contrib import messages
@@ -26,8 +25,9 @@ def contact(request):
             email = EmailMessage(
                 "Oodlums contact form submission",
                 content,
-                'unnaturalmotionmedia@gmail.com',
+                'oodlum.rhymes@gmail.com',
                 [email,],
+                ['oodlum.rhymes@gmail.com'],
                 )
             try:
                 email.send();
