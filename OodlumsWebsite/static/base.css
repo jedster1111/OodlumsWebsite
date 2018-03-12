@@ -170,7 +170,7 @@ header li {
 
     .spotifyWrapper > div {
         position: relative;
-        padding-bottom: 450px;
+        padding-bottom: 350px;
         padding-top: 0;
         height: 0;
         overflow: hidden;
@@ -362,7 +362,7 @@ h6 {
 
 .rowBoatWrapper {
     width: 190px;
-    height: 75px;
+    height: 220px;
     margin: 0 auto;
     padding-right: 110px;
 }
@@ -383,6 +383,8 @@ h6 {
         padding-top: 20px;
     }
 
+
+
     .rowBoat {
         width: 320px;
         bottom: 280px;
@@ -390,6 +392,7 @@ h6 {
 
     .rowBoatWrapper {
         padding-right: 660px;
+        height:200px;
     }
 }
 
