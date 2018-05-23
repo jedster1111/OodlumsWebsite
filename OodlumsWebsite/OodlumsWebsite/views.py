@@ -31,7 +31,7 @@ def contact(request):
                 )
             try:
                 email.send();
-                messages.info(request, 'Thanks for the message!')
+                messages.info(request, 'Thanks for the message')
             except BadHeaderError:
                 return HttpResponse('Invalid Header Found')
             return redirect('contact')

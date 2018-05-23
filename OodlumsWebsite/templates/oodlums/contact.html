@@ -13,11 +13,13 @@
             {% for message in messages %}
                 <li {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</li>
             {% endfor %}
+            <li>We will get back to you shortly!</li>
         </ul>
-    {% endif %}
+    {% else %}
     <h5>We're busy making more great videos.<br />
         Stay tuned!</h5>
-    
+    {% endif %}
+
     <form action="{% url 'contact' %}" method="post">
         {% csrf_token %}
         <div class="formWrapper">
