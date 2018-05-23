@@ -10,6 +10,8 @@ settings_deployment.py
 *.userosscache
 *.sln.docstates
 
+env/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

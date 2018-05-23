@@ -3,6 +3,7 @@ from django.core.mail import EmailMessage, BadHeaderError
 from django.template.loader import get_template
 from .forms import ContactForm
 from django.contrib import messages
+from django.utils.safestring import mark_safe
 
 def home(request):
     return render(request, 'oodlums/home.html')
@@ -21,6 +22,7 @@ def contact(request):
                     'message' : message,
                 })
             content = template.render(context)
+            fromEmail = email
 
             email = EmailMessage(
                 "Oodlums contact form submission",
@@ -30,13 +32,13 @@ def contact(request):
                 ['oodlum.rhymes@gmail.com'],
                 )
             try:
-                email.send();
-                messages.info(request, 'Thanks for the message')
+                #email.send()
+                messages.success(request, "We'll get back to you soon at '" + fromEmail + "'!")
             except BadHeaderError:
-                return HttpResponse('Invalid Header Found')
+                messages.error(request, "Something went wrong, please try again")
             return redirect('contact')
 
     else:
-         form = ContactForm()
+        form = ContactForm()
 
     return render(request, 'oodlums/contact.html', {'form' : form})

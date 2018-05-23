@@ -1,7 +1,8 @@
 """
 Definition of urls for OodlumsWebsite.
 """
-
+from django.conf import settings
+from django.conf.urls import include, url
 from django.urls import include, path
 from django.contrib import admin
 admin.autodiscover()
@@ -18,6 +19,13 @@ urlpatterns = [
     path('videos/', include('videos.urls')),
     path('contact/', views.contact, name ="contact"),
     path('admin/', admin.site.urls),
+]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns
 
 
     # Examples:
@@ -29,4 +37,3 @@ urlpatterns = [
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-]
